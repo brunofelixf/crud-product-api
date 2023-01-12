@@ -1,6 +1,6 @@
 import { ICreateProduct } from './../interfaces/product.d';
 import { prisma } from "../server"
-
+import { BadRequestError } from '../errors/ErrorApp';
 
 const createProductService = async ({
     name,
@@ -18,9 +18,7 @@ const createProductService = async ({
         }
     })
     .catch( (e) => {
-        console.log(e);
-        
-        throw new Error('Não foi possível criar o produto')
+        throw new BadRequestError('Não foi possível criar a postagem')
     })
 
     return product
