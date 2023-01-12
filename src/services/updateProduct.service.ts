@@ -10,13 +10,11 @@ const updateProductService = async ({
     quantity
 }: Partial<Product>) => {
     
-    const product = await prisma.product.findUnique({
-        where: { id }
-    })    
-    
-    if( !product ){
-        throw new NotFoundError('O produto não foi encontrado')
-    }
+    const product = await prisma.product
+        .findUniqueOrThrow({ where: { id } })    
+        .catch( ()=>{ 
+            throw new NotFoundError('Produto não encontrado')
+        })
     
     const productUpdated = await prisma.product
         .update({
