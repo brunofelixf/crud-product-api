@@ -1,4 +1,4 @@
-import { IUpdateProduct } from './../interfaces/product.d';
+import { IUpdateProduct } from '../interfaces/product';
 import { RequestHandler } from "express";
 import { updateProductService } from '../services/updateProduct.service';
 

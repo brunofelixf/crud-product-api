@@ -17,3 +17,7 @@ export interface IUpdateProduct {
 export interface IQueryProduct {
     id?: string;
 }
+
+export interface IParamProduct {
+    id?: string;
+}
