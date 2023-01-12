@@ -13,3 +13,7 @@ export interface IUpdateProduct {
     status?: Status;
     quantity?: number;
 }
+
+export interface IQueryProduct {
+    id?: string;
+}
