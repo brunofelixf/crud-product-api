@@ -16,7 +16,7 @@ model Product {
   quantity    Int
   created_at  DateTime  @default(now())
   updated_at  DateTime  @updatedAt
-  deleted_at  DateTime
+  deleted_at  DateTime?
 
   @@map("product")
 }
