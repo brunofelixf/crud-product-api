@@ -6,8 +6,8 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_USER: bruno
-      POSTGRES_PASSWORD: 123
+      POSTGRES_USER: process.env.USER 
+      POSTGRES_PASSWORD: process.env.PASSWORD
       POSTGRES_DB: db1
     ports:
       - "5432:5432"
