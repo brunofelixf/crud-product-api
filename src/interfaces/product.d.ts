@@ -6,3 +6,10 @@ export interface ICreateProduct {
     status: Status;
     quantity: number;
 }
+
+export interface IUpdateProduct {
+    name?: string;
+    category?: string;
+    status?: Status;
+    quantity?: number;
+}

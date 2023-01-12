@@ -1,12 +1,15 @@
 import { Router } from "express";
 import { createProductController } from "../controllers/createProduct.controller";
+import { updateProductController } from "../controllers/updateProduct.controller";
 import { validatorDataMiddleware } from "../middlewares/dataValidator";
-import { productSchema } from "../validations/product.schema";
+import { createProductSchema } from "../validations/createProduct.schema";
+import { updateProductSchema } from "../validations/updateProduct.schema";
 
 
 const routerApp = Router()
 
-routerApp.post('/product', validatorDataMiddleware(productSchema), createProductController)
+routerApp.post('/product', validatorDataMiddleware(createProductSchema), createProductController)
+routerApp.patch('/product/:id', validatorDataMiddleware(updateProductSchema), updateProductController)
 
 
 export { routerApp }

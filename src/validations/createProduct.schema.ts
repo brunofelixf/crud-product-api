@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 import { ICreateProduct } from '../interfaces/product'
 
-const productSchema: yup.SchemaOf<ICreateProduct> = yup.object().shape({
+const createProductSchema: yup.SchemaOf<ICreateProduct> = yup.object().shape({
     name: yup
         .string()
         .max(100, "O nome não pode ter mais de 100 caracteres")
@@ -20,4 +20,4 @@ const productSchema: yup.SchemaOf<ICreateProduct> = yup.object().shape({
         .required('A quantidade é requerida'),
 })
 
-export { productSchema }
+export { createProductSchema }
