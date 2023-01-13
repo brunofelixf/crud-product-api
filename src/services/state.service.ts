@@ -4,12 +4,13 @@ import { State } from "@prisma/client";
 
 const stateService = async ( { id, name }:State ) => {
     
-    await prisma.state
-        .findUniqueOrThrow({ where: { name }})
-        .catch(()=>{ 
-            throw new BadRequestError('O estado já foi salvo no banco, tente outro')
-        })
+    const alreadyExist = await prisma.state
+        .findUnique({ where: { name }})
 
+    if( alreadyExist ){
+        throw new BadRequestError('O estado já foi salvo no banco, tente outro')
+    }
+        
     const state = await prisma.state.create({
         data: {
             id,

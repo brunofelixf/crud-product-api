@@ -17,12 +17,8 @@ const stateController: RequestHandler = async (req, res) => {
     const states = data.data
 
     const names = states.geonames.map( (state: { geonameId: number; toponymName: string; }) => {
-        let names: State
-
-        names = { id: state.geonameId, name: state.toponymName }
-
-        return names
-    })    
+        return { id: state.geonameId, name: state.toponymName }
+    })        
 
     const i = names.findIndex( (data: State) => data.name === state)
     if( i > -1 ){
