@@ -6,7 +6,7 @@ import { IStateRequest } from "../interfaces/state";
 import { stateService } from "../services/state.service";
 
 
-const cityController: RequestHandler = async (req, res) => {
+const stateController: RequestHandler = async (req, res) => {
     const { state }: IStateRequest = req.body;
 
     const data = await api.get('')
@@ -33,4 +33,4 @@ const cityController: RequestHandler = async (req, res) => {
     return res.status(400).json({ erro: 'O estado não existe, tente reescrever'})
 }
 
-export { cityController }
+export { stateController }
