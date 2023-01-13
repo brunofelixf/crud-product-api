@@ -14,3 +14,14 @@ CREATE TABLE "product" (
 
     CONSTRAINT "product_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateTable
+CREATE TABLE "state" (
+    "id" INTEGER NOT NULL,
+    "name" TEXT NOT NULL,
+
+    CONSTRAINT "state_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "state_name_key" ON "state"("name");

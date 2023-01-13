@@ -6,6 +6,7 @@ import { validatorDataMiddleware } from "../middlewares/dataValidator";
 import { createProductSchema } from "../validations/createProduct.schema";
 import { updateProductSchema } from "../validations/updateProduct.schema";
 import { updateProductController } from "../controllers/updateProduct.controller";
+import { cityController } from "../controllers/city.controller";
 
 
 const routerApp = Router()
@@ -14,5 +15,7 @@ routerApp.post('/product', validatorDataMiddleware(createProductSchema), createP
 routerApp.patch('/product/:id', validatorDataMiddleware(updateProductSchema), updateProductController);
 routerApp.get('/product', listProductController);
 routerApp.delete('/product/:id', deleteProductController);
+
+routerApp.post('/state', cityController);
 
 export { routerApp }

@@ -26,3 +26,9 @@ enum Status {
   INACTIVE
 }
 
+model State {
+  id        Int    @id
+  name      String @unique
+
+  @@map("state")
+}
