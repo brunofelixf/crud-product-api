@@ -11,8 +11,12 @@ const deleteProductService = async ( id: string ) => {
     
     
     await prisma.product
-        .delete({
-            where: { id }
+        .update({
+            where: { id },
+            data: {
+                status: 'INACTIVE',
+                deleted_at: new Date()
+            }
         })    
     .catch( () => {
         throw new BadRequestError('Não foi possível deletar o produto')
