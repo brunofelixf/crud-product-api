@@ -13,20 +13,27 @@ Adicional:
 
 ⚠️ **Observação:**
 
-O endereço fornecido no desafio para consultar cidades do Rio de Janeiro não estava acessível,
-Dessa forma, foi utilizado o endereço: http://www.geonames.org/childrenJSON?geonameId=3469034,
-A API do endereço acima fornece informações sobre os **Estados** brasileiros; 
+O endereço fornecido no desafio para consultar cidades do Rio de Janeiro não estava acessível.
+Dessa forma, foi utilizado o endereço: http://www.geonames.org/childrenJSON?geonameId=3469034.
+A API do endereço acima fornece informações sobre os **Estados** brasileiros. 
 
 
-- Há uma rota onde é possível consultar o nome de um estado brasileiro por intermédio da API externa
-  - Caso exista: O estado é **salvo** no banco de dados,
-  - Caso o estado já tenha sido salvo anteriormente: **Não será salvo** novamente e é exibida uma mensagem ao usuário,
-  - Caso o nome do estado não esteja corretamente escrito ou o estado não exista: Uma **mensagem** é exibida ao usuário
+- Há uma rota onde é possível consultar o nome de um estado brasileiro por intermédio da API externa:
+  - Caso **exista**: O estado é **salvo** no banco de dados,
+  - Caso o estado **já tenha sido salvo** anteriormente: **Não será salvo** novamente e é exibida uma mensagem ao usuário,
+  - Caso o nome do estado não esteja corretamente escrito ou o estado **não exista**: Uma **mensagem** é exibida ao usuário
   
-  
+---
+##Iniciando o Projeto
+
+Comandos:
+- docker compose up
+- npm run dev
+
 
 ⚒️ **URL BASE:** http://localhost:3000/
 
+---
 # Sumário
 
 - Usuário
@@ -222,3 +229,4 @@ Rotas responsável pela consulta e cadastro dos estados brasileiros.
     "error": "O estado já foi salvo no banco, tente outro"
 }
 ```
+------
