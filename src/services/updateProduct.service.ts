@@ -1,5 +1,5 @@
 import { prisma } from "../server"
-import { BadRequestError, NotFoundError } from '../errors/ErrorApp';
+import { BadRequestError, NotFoundError } from '../errors/errorApp';
 import { Product } from '@prisma/client';
 
 const updateProductService = async ({

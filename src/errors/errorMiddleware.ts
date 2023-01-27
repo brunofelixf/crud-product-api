@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { ErrorApp } from "./ErrorApp"
+import { ErrorApp } from './errorApp';
 
 const errorMiddleware = (
     error: Error & Partial<ErrorApp>, 

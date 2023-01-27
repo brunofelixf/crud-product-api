@@ -1,5 +1,5 @@
 import { prisma } from "../server"
-import { NotFoundError } from '../errors/ErrorApp';
+import { NotFoundError } from '../errors/errorApp';
 
 const listProductService = async ( id: string | undefined ) => {
     

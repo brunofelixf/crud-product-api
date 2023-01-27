@@ -1,7 +1,7 @@
 import { State } from "@prisma/client";
 import { RequestHandler } from "express";
 import { api } from "../api";
-import { BadRequestError } from "../errors/ErrorApp";
+import { BadRequestError } from "../errors/errorApp";
 import { IStateRequest } from "../interfaces/state";
 import { stateService } from "../services/state.service";
 

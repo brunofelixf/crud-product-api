@@ -1,5 +1,5 @@
 import { prisma } from "../server"
-import { BadRequestError } from '../errors/ErrorApp';
+import { BadRequestError } from '../errors/errorApp';
 import { State } from "@prisma/client";
 
 const stateService = async ( { id, name }:State ) => {

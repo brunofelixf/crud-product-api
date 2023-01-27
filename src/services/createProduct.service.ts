@@ -1,6 +1,6 @@
 import { ICreateProduct } from './../interfaces/product.d';
 import { prisma } from "../server"
-import { BadRequestError } from '../errors/ErrorApp';
+import { BadRequestError } from '../errors/errorApp';
 
 const createProductService = async ({
     name,
