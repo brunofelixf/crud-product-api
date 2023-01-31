@@ -1,7 +1,17 @@
+import request  from "supertest";
+import { server } from "../../src/server";
 
+beforeEach( () => {
+    server
+})
 
-describe('Testa rota', () => {
-    test('', () => {
-        expect(2+2).toBe(4)
-    });
+afterEach( () => {
+    server.close();
+})
+
+describe('Testa rota de produtos', () => {
+    it('listar', async () => {
+        await request(server).get('/product')
+        .expect(200)
+    })
 });

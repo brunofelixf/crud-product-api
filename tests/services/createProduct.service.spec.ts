@@ -1,7 +1,12 @@
 import { ICreateProduct } from "../../src/interfaces/product";
+import { server } from "../../src/server";
 import { createProductService } from "../../src/services/createProduct.service";
 
 describe('Cria produto service ',  () => {
+
+    afterEach( () => {
+        server.close();
+    })
     
     const data = {
             name: "Nome Teste",
