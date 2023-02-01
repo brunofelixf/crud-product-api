@@ -13,7 +13,6 @@ describe('Cria produto service ',  () => {
             category: "Categoria Teste",
             status: "ACTIVE",
             quantity: 100, 
-        
     } as ICreateProduct
 
     it('Deve retornar status 201', async () => {
