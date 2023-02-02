@@ -18,7 +18,9 @@ const createProductService = async ({
         }
     })
     .catch( (e) => {
-        throw new BadRequestError('Não foi possível criar a postagem')
+        console.log(e);
+        
+        throw new BadRequestError('Não foi possível criar o produto')
     })
 
     return product
