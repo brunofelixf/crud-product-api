@@ -17,9 +17,7 @@ const createProductService = async ({
             quantity
         }
     })
-    .catch( (e) => {
-        console.log(e);
-        
+    .catch( (e) => {        
         throw new BadRequestError('Não foi possível criar o produto')
     })
 
