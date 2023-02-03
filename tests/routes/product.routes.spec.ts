@@ -1,15 +1,19 @@
 import request  from "supertest";
 import { server } from "../../src/server";
 
-beforeEach( () => {
-    server
-})
 
-afterEach( () => {
-    server.close();
-})
+
 
 describe('Criar produtos | Route', () => {
+
+    beforeEach( () => {
+        server
+    })
+    
+    afterEach( () => {
+        server.close();
+    })
+    
     it('Deve criar um produto e retornar status 201', async () => {
         const data = {
             name: "Nome Teste",
